@@ -22,4 +22,5 @@ Route::get('/main', function () {
     return view('main');
 });
 
-Route::post('/inputreservation', [ReservationController::class,'input']);
+Route::post('/main', [ReservationController::class,'store']);
+Route::get('/reservations', [ReservationController::class, 'index']);

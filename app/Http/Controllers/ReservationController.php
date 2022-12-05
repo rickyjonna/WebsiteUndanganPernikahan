@@ -1,20 +1,31 @@
 <?php
- 
+
 namespace App\Http\Controllers;
- 
-use App\Models\Reservations;
+
+use App\Models\Reservation;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Http\Request;
- 
+
 class ReservationController extends Controller
 {
-    public function input(Request $request)
+    use HasFactory;
+
+    public function index()
+    {
+        return view('reservations.index',[
+            'title' => 'Halaman Reservasi',
+            'reservations' => Reservation::latest()->paginate(7)->withQueryString()
+        ]);
+    }
+
+    public function store(Request $request)
     {
         $validated = $request->validate([
             'name'=>'required|max:255',
-            'phone_number'=>'required|max:255',
-            'wish'=>'required|max:255',
+            'phone_number'=>'required|max:15',
+            'wish'=>'required',
         ]);
-        Reservations::create($validated);
+        Reservation::create($validated);
         return back();
     }
 }
