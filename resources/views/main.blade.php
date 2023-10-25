@@ -5,9 +5,9 @@
     <title>Undangan Pernikahan</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/maps.css">
-    <link rel="stylesheet" type="text/css" href="css/gallery.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/maps.css">
+    <link rel="stylesheet" type="text/css" href="../css/gallery.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <link rel="stylesheet" href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css">
@@ -36,7 +36,7 @@
 
         .bgimg2,
         .bgimg3 {
-            background-image: url("images/img2.jpg")
+            background-image: url("../images/img2.jpg")
         }
     </style>
 </head>
@@ -44,8 +44,8 @@
 <body>
     <!-- musik -->
     <audio autoplay loop>
-        <source src="audio/yoie.ogg" type="audio/ogg">
-        <source src="audio/yoie.mp3" type="audio/mpeg">
+        <source src="../audio/yoie.ogg" type="audio/ogg">
+        <source src="../audio/yoie.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
 
@@ -53,21 +53,14 @@
 
     <!-- Undangan Ilham & Bunga -->
     <!-- Background photo -->
-    <div class="w3-display-container bgimg2" id="home">
-        <div class="w3-display-middle w3-text-white w3-center">
-            <h2>Kepada :</h2>
-            <h1 class="w3-jumbo">Ricky Jonna</h1>
-            <h1 class="w3-jumbo"> & </h1>
-            <h1 class="w3-jumbo"> Keluarga </h1>
-            <h4>Kami Mengharapkan Kehadiran Anda</h4>
-            </br>
-            <h2 id="cd"></h2>
-        </div>
-    </div>
-
-    <div class="w3-container w3-padding-64 w3-pale-red w3-grayscale-min">
+    <div id="home" class="w3-container w3-padding-64 w3-pale-red w3-grayscale-min">
         <div class="w3-content" data-aos="fade-left">
             <h1 class="w3-center w3-text-grey">Undangan Pernikahan</h1>
+            <h1 class="w3-center w3-text-grey">Kepada : {{ $name }}</h1>
+            <h2 class="w3-center w3-text-grey">Kami Mengharapkan Kehadiran Anda</h2>
+            </br>
+            <h2 class="w3-center w3-text-grey"id="cd"></h2>
+            </br>
             <h1 class="w3-center w3-text-grey"><b>(QS. An-Nisa : 22)</b></h1>
             <h2 class="w3-center w3-text-grey">وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُمْ مِنْ أَنْفُسِكُمْ أَزْوَاجًا
                 لِتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُمْ مَوَدَّةً وَرَحْمَةً إِنَّ فِي ذَلِكَ لَآيَاتٍ لِقَوْمٍ
@@ -99,19 +92,19 @@
         <div class="slideshow-container">
             <div class="mySlides fade">
                 <div class="numbertext">1 / 4</div>
-                <img src="images/img2.jpg" style="width:100%">
+                <img src="../images/img2.jpg" style="width:100%">
             </div>
             <div class="mySlides fade">
                 <div class="numbertext">2 / 4</div>
-                <img src="images/img4.jpg" style="width:100%">
+                <img src="../images/img4.jpg" style="width:100%">
             </div>
             <div class="mySlides fade">
                 <div class="numbertext">3 / 4</div>
-                <img src="images/img5.jpg" style="width:100%">
+                <img src="../images/img5.jpg" style="width:100%">
             </div>
             <div class="mySlides fade">
                 <div class="numbertext">4 / 4</div>
-                <img src="images/img6.jpg" style="width:100%">
+                <img src="../images/img6.jpg" style="width:100%">
             </div>
             <!-- Next and previous buttons -->
             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -229,15 +222,15 @@
     </br>
 
     <!-- Protokol Kesehatan -->
-    <div class="w3-display-container bgimg3" id="home">
+    <div class="w3-display-container bgimg3 py-5" id="home">
         <div class="w3-display-middle w3-text-white w3-center">
             <h1 class="w3-jumbo">Protokol Kesehatan</h1>
-            <h2>Demi menjaga kebijakan pemerintah untuk memutus mata rantai
+            <h2>Untuk memutus mata rantai
                 Covid-19 jangan lupa untuk menerapkan Protokol Kesehatan. Terimakasih
             </h2>
-            <img src="images/cuci-tangan.png" alt="cucitangan">
-            <img src="images/jaga-jarak.png" alt="jagajarak">
-            <img src="images/pakai-masker.png" alt="pakaimasker">
+            <img src="../images/cuci-tangan.png" alt="cucitangan" style="width:100px">
+            <img src="../images/jaga-jarak.png" alt="jagajarak" style="width:100px">
+            <img src="../images/pakai-masker.png" alt="pakaimasker" style="width:100px">
         </div>
     </div>
 
@@ -263,9 +256,9 @@
     </br>
 
     <!-- Script -->
-    <script src="js/countdown.js"></script>
-    <script src="js/reservation.js"></script>
-    <script src="js/gallery.js"></script>
+    <script src="../js/countdown.js"></script>
+    <script src="../js/reservation.js"></script>
+    <script src="../js/gallery.js"></script>
     <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
     <script>
         AOS.init();

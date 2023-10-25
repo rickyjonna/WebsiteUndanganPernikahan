@@ -18,8 +18,8 @@ Route::get('/', function () {
     return view('cover');
 });
 
-Route::get('/main', function () {
-    return view('main');
+Route::get('/main/{name}', function ($name) {
+    return view('main', ['name' => $name]);
 });
 
 Route::post('/main', [ReservationController::class,'store']);
