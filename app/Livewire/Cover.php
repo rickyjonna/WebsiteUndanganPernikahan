@@ -17,7 +17,7 @@ class Cover extends Component
 
     public function getLink(){
         $name = $this->name;
-        $this->link = 'http://127.0.0.1:8000/' . $name;
+        $this->link = 'http://127.0.0.1:8000/main/' . $name;
         $this->reset('name');
     }
 }
